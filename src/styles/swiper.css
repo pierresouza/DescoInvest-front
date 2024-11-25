@@ -1,0 +1,21 @@
+/* Swiper Styles custom */
+.swiper {
+  @apply pt-4;
+}
+
+.swiper-pagination {
+  --swiper-pagination-bottom: 20px;
+  @apply flex items-center;
+}
+
+.swiper-pagination-horizontal {
+  @apply w-min !important;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-primary-300;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-primary-500 w-3 h-3;
+}

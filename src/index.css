@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .clip-arrow-down {
+    clip-path: polygon(0 0, 0 80%, 50% 100%, 100% 80%, 100% 0, 50% 20%);
+  }
+
+  .clip-arrow-rigth {
+    clip-path: polygon(80% 0, 100% 50%, 80% 100%, 0% 100%, 20% 50%, 0% 0%);
+  }
+}
+@keyframes navbar {
+  from {
+    top: -350px;
+  }
+  to {
+    top: 70px;
+  }
+}
+
+@keyframes navbarExit {
+  from {
+    top: 70px;
+  }
+  to {
+    top: -350px;
+  }
+}
+.navbar {
+  animation-name: navbar;
+  animation-duration: 1s;
+}
+.navbarExit {
+  animation-name: navbarExit;
+  animation-duration: 1s;
+}
+
+@layer base {
+  :root {
+    /*Preset Fonts ans Typografy*/
+
+    --heading1-700: normal 700 60px "Poppins", sans-serif;
+    --heading1-600: normal 600 60px "Poppins", sans-serif;
+    --heading1-500: normal 500 60px "Poppins", sans-serif;
+
+    --heading2-700: normal 700 42px "Poppins", sans-serif;
+    --heading2-600: normal 600 42px "Poppins", sans-serif;
+    --heading2-500: normal 500 42px "Poppins", sans-serif;
+
+    --heading3-700: normal 700 60px "Poppins", sans-serif;
+    --heading3-600: normal 600 60px "Poppins", sans-serif;
+    --heading3-500: normal 500 60px "Poppins", sans-serif;
+
+    --heading4-700: normal 700 28px "Poppins", sans-serif;
+    --heading4-600: normal 600 28px "Poppins", sans-serif;
+    --heading4-500: normal 500 28px "Poppins", sans-serif;
+  }
+
+  body {
+    @apply font-primary;
+  }
+}
+
+.anime-vetor-stroke {
+  animation: stroke-vetor 12s linear infinite alternate;
+}
+
+@keyframes stroke-vetor {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 700;
+  }
+}
+
+.animation-bluor-one {
+  animation: blour-one 2s linear 1s infinite forwards;
+}
+
+@keyframes blour-one {
+  from {
+    transform: translateY(0px);
+    filter: blur(1px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-45px);
+    filter: blur(3px);
+    opacity: 0.2;
+  }
+}
+
+.animation-bluor-two {
+  animation: blour-two 2s linear 2s infinite forwards;
+}
+
+@keyframes blour-two {
+  from {
+    transform: translateY(0px);
+    filter: blur(1px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-45px);
+    filter: blur(3px);
+    opacity: 0.2;
+  }
+}
+
+.animation-bluor-three {
+  animation: blour-three 2s linear 3s infinite forwards;
+}
+
+@keyframes blour-three {
+  from {
+    transform: translateY(0px);
+    filter: blur(1px);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-45px);
+    filter: blur(3px);
+    opacity: 0.2;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme(colors.primary.500);
+  border-radius: 8px;
+}
